@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://huwentao1222.github.io/2017/04/26/启动文件之-main/index.html">
 <meta property="og:site_name" content="Henry's Blog">
 <meta property="og:description" content="__main函数功能 将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址 清零ZI 区域 跳转到__rt_entry  所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init(). 一段启动文件代码示例：123456789101112Reset_Handler   PROC                EXPORT  Reset_Handler">
-<meta property="og:updated_time" content="2017-04-26T03:05:45.960Z">
+<meta property="og:updated_time" content="2017-04-26T05:06:27.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="启动文件之__main">
 <meta name="twitter:description" content="__main函数功能 将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址 清零ZI 区域 跳转到__rt_entry  所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init(). 一段启动文件代码示例：123456789101112Reset_Handler   PROC                EXPORT  Reset_Handler">
@@ -372,7 +372,7 @@
 <li>清零ZI 区域</li>
 <li>跳转到__rt_entry</li>
 </ul>
-<p>所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init().</p>
+<p>所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化<code>SDRAM_Init()</code>.</p>
 <h2 id="一段启动文件代码示例："><a href="#一段启动文件代码示例：" class="headerlink" title="一段启动文件代码示例："></a>一段启动文件代码示例：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Reset_Handler   PROC</div><div class="line">                EXPORT  Reset_Handler             [WEAK]</div><div class="line">                IMPORT  SystemInit</div><div class="line">                IMPORT  SDRAMInit</div><div class="line">                IMPORT  __main</div><div class="line">                LDR     R0, =SystemInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =SDRAMInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =__main</div><div class="line">                BX      R0</div><div class="line">                ENDP</div></pre></td></tr></table></figure>
 
       

@@ -377,7 +377,7 @@
 <li>清零ZI 区域</li>
 <li>跳转到__rt_entry</li>
 </ul>
-<p>所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init().</p>
+<p>所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化<code>SDRAM_Init()</code>.</p>
 <h2 id="一段启动文件代码示例："><a href="#一段启动文件代码示例：" class="headerlink" title="一段启动文件代码示例："></a>一段启动文件代码示例：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Reset_Handler   PROC</div><div class="line">                EXPORT  Reset_Handler             [WEAK]</div><div class="line">                IMPORT  SystemInit</div><div class="line">                IMPORT  SDRAMInit</div><div class="line">                IMPORT  __main</div><div class="line">                LDR     R0, =SystemInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =SDRAMInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =__main</div><div class="line">                BX      R0</div><div class="line">                ENDP</div></pre></td></tr></table></figure>
 
           
