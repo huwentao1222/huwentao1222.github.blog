@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Embedded Software, Knowledge, History, Funny, Life" />
+  <meta name="keywords" content="启动文件,arm,keil," />
 
 
 
@@ -90,15 +90,17 @@
 
 
 
-<meta name="description" content="dot dot dot">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Henry's Blog">
-<meta property="og:url" content="http://huwentao1222.github.io/archives/2017/index.html">
+<meta name="description" content="__main函数功能 将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址 清零ZI 区域 跳转到__rt_entry  所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init(). 一段启动文件代码示例：123456789101112Reset_Handler   PROC                EXPORT  Reset_Handler">
+<meta name="keywords" content="启动文件,arm,keil">
+<meta property="og:type" content="article">
+<meta property="og:title" content="启动文件之__main">
+<meta property="og:url" content="http://huwentao1222.github.io/2017/04/26/启动文件之-main/index.html">
 <meta property="og:site_name" content="Henry's Blog">
-<meta property="og:description" content="dot dot dot">
+<meta property="og:description" content="__main函数功能 将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址 清零ZI 区域 跳转到__rt_entry  所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init(). 一段启动文件代码示例：123456789101112Reset_Handler   PROC                EXPORT  Reset_Handler">
+<meta property="og:updated_time" content="2017-04-26T03:05:45.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Henry's Blog">
-<meta name="twitter:description" content="dot dot dot">
+<meta name="twitter:title" content="启动文件之__main">
+<meta name="twitter:description" content="__main函数功能 将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址 清零ZI 区域 跳转到__rt_entry  所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init(). 一段启动文件代码示例：123456789101112Reset_Handler   PROC                EXPORT  Reset_Handler">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://huwentao1222.github.io/archives/2017/"/>
+  <link rel="canonical" href="http://huwentao1222.github.io/2017/04/26/启动文件之-main/"/>
 
 
 
 
 
-  <title> 归档 | Henry's Blog </title>
+  <title> 启动文件之__main | Henry's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,177 +263,188 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/26/启动文件之-main/" itemprop="url">
-              
-                <span itemprop="name">启动文件之__main</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-26T10:49:35+08:00"
-              content="2017-04-26" >
-          04-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/20/Markdown测试/" itemprop="url">
-              
-                <span itemprop="name">Markdown测试</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-20T16:45:17+08:00"
-              content="2017-04-20" >
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/20/我的第一篇博客/" itemprop="url">
-              
-                <span itemprop="name">我的第一篇博客</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-20T15:31:28+08:00"
-              content="2017-04-20" >
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/20/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-20T13:15:04+08:00"
-              content="2017-04-20" >
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://huwentao1222.github.io/2017/04/26/启动文件之-main/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Huwentao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Henry's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                启动文件之__main
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T10:49:35+08:00">
+                2017-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/嵌入式技术/" itemprop="url" rel="index">
+                    <span itemprop="name">嵌入式技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="main函数功能"><a href="#main函数功能" class="headerlink" title="__main函数功能"></a>__main函数功能</h1><ul>
+<li>将非零（只读RO和读写RW）运行区域从其载入地址复制到运行地址</li>
+<li>清零ZI 区域</li>
+<li>跳转到__rt_entry</li>
+</ul>
+<p>所以如果使用SDRAM等外部RAM，应该在__ main函数前完成初始化SDRAM_Init().</p>
+<h2 id="一段启动文件代码示例："><a href="#一段启动文件代码示例：" class="headerlink" title="一段启动文件代码示例："></a>一段启动文件代码示例：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Reset_Handler   PROC</div><div class="line">                EXPORT  Reset_Handler             [WEAK]</div><div class="line">                IMPORT  SystemInit</div><div class="line">                IMPORT  SDRAMInit</div><div class="line">                IMPORT  __main</div><div class="line">                LDR     R0, =SystemInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =SDRAMInit</div><div class="line">                BLX     R0</div><div class="line">                LDR     R0, =__main</div><div class="line">                BX      R0</div><div class="line">                ENDP</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/启动文件/" rel="tag"># 启动文件</a>
+          
+            <a href="/tags/arm/" rel="tag"># arm</a>
+          
+            <a href="/tags/keil/" rel="tag"># keil</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/20/Markdown测试/" rel="prev" title="Markdown测试">
+                Markdown测试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -439,6 +452,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -458,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.jpg"
@@ -521,6 +547,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#main函数功能"><span class="nav-number">1.</span> <span class="nav-text">__main函数功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一段启动文件代码示例："><span class="nav-number">1.1.</span> <span class="nav-text">一段启动文件代码示例：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,11 +683,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
